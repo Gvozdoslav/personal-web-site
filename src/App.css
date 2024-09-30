@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+* {
+  font-size: 30px;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.site-sections {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 5%
+}
+
+.site-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: min(40%, 920px);
+}
+
+.site-section__header {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.site-section__image {
+  margin-top: 35px;
+  max-height: 250px;
+}
+
+.site-section__about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  gap: 5%
+}
+
+.site-section__list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+  width: 100%;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+header {
+  background-color: #282c34;
+  padding: 22px;
+  color: white;
+  text-align: center;
+  width: 100vw;
+}
+
+.header__nav {
+  display: flex;
+  flex-direction: row;
+}
+
+header nav a {
+  margin: 0 15px;
+  color: #61dafb;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #282c34;
+  width: 100vw;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.footer__email--gradient {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  * {
+    font-size: 15px
   }
-  to {
-    transform: rotate(360deg);
+
+  .site-section {
+    max-width: 90%;
+  }
+
+  .site-section__about {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .site-section__image {
+    max-width: 100%;
+    max-height: 200px;
+  }
+
+  header nav a {
+    margin: 0 10px;
+    font-size: 20px;
+  }
+
+  * {
+    font-size: 20px;
+  }
+
+  .footer__email--gradient {
+    font-size: 18px;
   }
 }
